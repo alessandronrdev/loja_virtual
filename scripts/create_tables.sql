@@ -1,0 +1,13 @@
+CREATE TABLE public.clientes (
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    data_cadastro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE public.produtos (
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    preco DECIMAL(10, 2) NOT NULL,
+    estoque INTEGER DEFAULT 0
+);
